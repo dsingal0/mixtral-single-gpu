@@ -2,6 +2,7 @@
 models/
 resources/
 hf_cache/
+hf-cache/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
