@@ -1,0 +1,26 @@
+build:
+  gpu: true
+  cuda: "12.2"
+  # a list of ubuntu apt packages to install
+  system_packages:
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
+  # python version in the form '3.8' or '3.8.12'
+  python_version: "3.11"
+  python_packages:
+    - "numpy"
+    - "torch"
+    - "Pillow"
+    - "accelerate"
+    - "numpy"
+    - "scipy"
+    - "transformers"
+    - "sentencepiece"
+    - "hf_transfer"
+    - "git+https://github.com/mobiusml/hqq.git"
+  run:
+    - curl -o /usr/local/bin/pget -L "https://github.com/replicate/pget/releases/latest/download/pget_$(uname -s)_$(uname -m)" && chmod +x /usr/local/bin/pget
+
+# predict.py defines how predictions are run on your model
+image: "r8.im/dsingal0/mixtral-offload"
+predict: "predict.py:Predictor"
