@@ -1,9 +1,0 @@
-numpy
-torch
-Pillow
-accelerate
-numpy
-scipy
-transformers
-sentencepiece
-git+https://github.com/mobiusml/hqq.git

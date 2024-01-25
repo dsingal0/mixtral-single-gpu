@@ -1,7 +1,0 @@
-numpy
-torch
-torchvision
-facexlib==0.2.3
-opencv-python==4.6.0.66
-Pillow
-tqdm
